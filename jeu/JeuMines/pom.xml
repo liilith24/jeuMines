@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>JeuMines</groupId>
+  <artifactId>JeuMines</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <build>
+    <!-- Standard Maven Source Directory -->
+    <sourceDirectory>src/main/java</sourceDirectory>
+
+    <resources>
+      <!-- Standard Maven Resources Directory -->
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      
+      <!-- Additional Resource Folder for Images -->
+      <resource>
+        <directory>images</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+
+    <plugins>
+      <!-- Compiler Plugin (Already Included) -->
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+
+      <!-- Maven Clean Plugin (To clean the project) -->
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.1.0</version>
+      </plugin>
+
+      <!-- Maven JAR Plugin (To package project into a JAR) -->
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+      </plugin>
+
+      <!-- Maven Surefire Plugin (To run JUnit tests) -->
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+      </plugin>
+
+      <!-- Maven Install Plugin (To install dependencies locally) -->
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>3.0.0-M1</version>
+      </plugin>
+      
+      <!-- Maven Resources Plugin (For resource management) -->
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.2.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
